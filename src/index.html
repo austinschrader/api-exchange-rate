@@ -13,10 +13,16 @@
     </div>
     <form id="formOne">
       <div class="form-group">
-        <label for="search-term">Search Term</label>
+        <label for="search-term">From USD</label>
         <input id="search-term" type="text" value="45" />
       </div>
-      <button type="submit" class="btn btn-danger">Submit</button>
+      <div class="form-group">
+        <label for="currencies">To: </label>
+        <select name="currencies" id="currencies">
+          <option value="usd">USD</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-danger">Convert</button>
     </form>
     <div id="results"></div>
   </div>
