@@ -2,7 +2,7 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-// import { User } from './js/user.js';
+import CurrencyService from './js/CurrencyService.js';
 
 $(document).ready(function () {
   $('#formOne').submit(function (event) {
