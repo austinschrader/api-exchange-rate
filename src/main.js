@@ -6,11 +6,15 @@ import CurrencyService from './js/currency-service.js';
 
 async function makeApiCall(currencyAmount, currencyTo) {
   const response = await CurrencyService.getConversion();
-  getElements(response);
+  getElements(response, currencyAmount, currencyTo);
 }
 
 function getElements(response, currencyAmount, currencyTo) {
-  console.log(response);
+  if (response.conversion_rates) {
+    let currentRate = eval(`response.conversion_rates.${currencyTo}`);
+    let resultAmount = currentRate * currencyAmount
+    $('#results').empty().append(`This is how much you would have in ${currencyTo}: ${resultAmount}`)
+  }
 }
 
 $(document).ready(function () {
