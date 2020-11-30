@@ -17,46 +17,31 @@ This project was created by Austin Schrader for the Friday project where we are 
 
 ## Specs
 
-Describe: User
-Test: "should correctly output the Earth age of the User object"
-let user = new User(45);
-Expect(user.earthAge).toEqual(45);
+Describe: Currency Service
+Test: "should correctly output the converted currency from USD to RUB"
+let currencyAmount = 45;
+let currencyTo = "RUB"
+Expect(makeApiCall(currencyAmount, currencyTo)).toEqual(3433.64);
 
-Test: "should correctly output the Mercury age of the User object"
-let user = new User(45);
-Expect(user.mercuryAge()).toEqual(45 / 0.24);
+Test: "should correctly output the converted currency from USD to AED"
+let currencyAmount = 45;
+let currencyTo = "AED"
+Expect(makeApiCall(currencyAmount, currencyTo)).toEqual(165.24);
 
-Test: "should correctly output the Venus age of the User object"
-let user = new User(45);
-Expect(user.venusAge()).toEqual(45 / 0.62);
+Test: "should correctly output the converted currency from USD to CNY"
+let currencyAmount = 45;
+let currencyTo = "CNY"
+Expect(makeApiCall(currencyAmount, currencyTo)).toEqual(295.98);
 
-Test: "should correctly output the Mars age of the User object"
-let user = new User(45);
-Expect(user.marsAge()).toEqual(45 / 1.88);
+Test: "should correctly output the converted currency from USD to COP"
+let currencyAmount = 45;
+let currencyTo = "COP"
+Expect(makeApiCall(currencyAmount, currencyTo)).toEqual(164142.86);
 
-Test: "should correctly output the Jupiter age of the User object"
-let user = new User(45);
-Expect(user.jupiterAge()).toEqual(45 / 11.86);
-
-Test: "should correctly output the life expectancy left in Earth years of the User object"
-let user = new User(45);
-Expect(user.earthYearsLeft()).toEqual(78.54 - 45);
-
-Test: "should correctly output the life expectancy left in Mercury years of the User object"
-let user = new User(45);
-Expect(user.mercuryYearsLeft()).toEqual((78.54 - 45) / 0.24);
-
-Test: "should correctly output the life expectancy left in Venus years of the User object"
-let user = new User(45);
-Expect(user.venusYearsLeft()).toEqual((78.54 - 45) / 0.62);
-
-Test: "should correctly output the life expectancy left in Mars years of the User object"
-let user = new User(45);
-Expect(user.marsYearsLeft()).toEqual((78.54 - 45) / 1.88);
-
-Test: "should correctly output the life expectancy left in Jupiter years of the User object"
-let user = new User(45);
-Expect(user.jupiterYearsLeft()).toEqual((78.54 - 45) / 11.86);
+Test: "should correctly output the converted currency from USD to COP"
+let currencyAmount = 45;
+let currencyTo = "DKK"
+Expect(makeApiCall(currencyAmount, currencyTo)).toEqual(280.92);
 
 ## Known Bugs
 
