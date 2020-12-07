@@ -15,12 +15,12 @@ function getElements(response, currencyAmount, currencyTo) {
     if (currentRate) {
       console.log(currentRate)
       let resultAmount = currentRate * currencyAmount
-      $('#results').empty().append(`This is how much you would have in ${currencyTo}: ${resultAmount}`)
+      $('#results').empty().append(`This is how much you would have in ${currencyTo}: ${resultAmount}.`)
     } else {
-      $('#results').empty().text(`You have selected a non-existent currency`)
+      $('#results').empty().text(`The currency selected does not exist.`)
     }
   } else {
-    $('#results').empty().text(`The API call has experienced an error, because here's the response result we got: ${response.result}`)
+    $('#results').empty().text(`The API call has experienced an error, because here's the response result we got: ${response.result}.`)
   }
 }
 
