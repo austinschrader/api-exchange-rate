@@ -12,8 +12,15 @@ async function makeApiCall(currencyAmount, currencyTo) {
 function getElements(response, currencyAmount, currencyTo) {
   if (response.conversion_rates) {
     let currentRate = eval(`response.conversion_rates.${currencyTo}`);
-    let resultAmount = currentRate * currencyAmount
-    $('#results').empty().append(`This is how much you would have in ${currencyTo}: ${resultAmount}`)
+    if (currentRate) {
+      console.log(currentRate)
+      let resultAmount = currentRate * currencyAmount
+      $('#results').empty().append(`This is how much you would have in ${currencyTo}: ${resultAmount}`)
+    } else {
+      $('#results').empty().text(`You have selected a non-existent currency`)
+    }
+  } else {
+    $('#results').empty().text(`The API call has experienced an error, because here's the response result we got: ${response.result}`)
   }
 }
 
