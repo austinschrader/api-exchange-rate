@@ -12,8 +12,13 @@ This project was created by Austin Schrader for the Friday project where we are 
 
 1. Download this repository by clicking the "Clone or Download" button
 2. Navigate to the folder where it downloaded
-3. Open the index.html file inside of your preferred browser
-4. Congratulations, this is the website!
+3. Open the terminal window and type npm install to install the required dependencies
+4. This project uses https://www.exchangerate-api.com/, so you will need to acquire an API key by signing up.
+5. Once you obtain an API key, make a .env file in your project file at the root level
+6. In this .env file, you will need to save the API key like: API_KEY:yourapikeyhere
+7. Type npm install in the console to download required dependencies
+8. Type npm start in the console to start the live server
+9. Congratulations, this is the website!
 
 ## Specs
 
