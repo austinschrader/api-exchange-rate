@@ -15,6 +15,7 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
+    new webpack.EnvironmentPlugin(['API_KEY']),
     new Dotenv(),
     new HtmlWebpackPlugin({
       title: 'Friday TDD Project',
